@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Commande</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<header>
+    <h1>Formulaire de Commande</h1>
+    <div class="navigation">
+        <label for="menu">Menu :</label>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="commande.html">Ma Commande</a>
+        </nav>
+    </div>
+</header>
+<section class="commande">
+    <h1>Formulaire de Commande</h1>
+    <form id="commande-form">
+      <label for="name">Nom & Prénom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Adresse E-mail :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="numero1">Numero de téléphone N°1 :</label>
+      <input type="tel" id="numero1" name="numero1" required>
+
+      <label for="numero2">Numero de téléphone N°2 :</label>
+      <input type="tel" id="numero2" name="numero2">
+
+      <label for="message">Commentaire :</label>
+      <textarea id="message" name="message" ></textarea>
+
+      <!-- Ajouter ici un champ caché pour sauvegarder la variable "listeProduits" -->
+      <input type="hidden" id="listeProduits" name="listeProduits" value="">
+
+      <button type="button" onclick="envoyerEmail()">Valider ma Commande</button>
+    </form>
+  </section>
+<body>
+    
+</body>
+</html>
