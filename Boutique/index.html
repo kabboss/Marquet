@@ -1,0 +1,255 @@
+" <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ma Boutique</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script>
+    emailjs.init("4R0TonA7bm5J_X80e");
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Ma Boutique en Ligne</h1>
+
+    <div class="navigation">
+      <label for="menu">Menu :</label>
+      <nav>
+          <a href="index.html">Accueil</a>
+          <a href="commande.html">Ma Commande</a>
+      </nav>
+  </div>
+  </header>
+  
+  <section class="panier">
+    <div id="panier-icon" onclick="afficherListePanier()">
+      <i class="fas fa-shopping-cart"></i> $<span id="total">0</span> ▼
+    </div>
+  </section>
+
+  <div>
+      <a class="com" type="button" href="commande.html" >Faire ma commande</a>
+  </div>
+
+
+  <main>
+    <section class="produit">
+      <h2>Produits</h2>
+      <ul>
+        <li>
+          <img src="img/gps.jpg" alt="GPS" style="max-width: 200px; height: auto;">
+          <strong><p>GPS de Haute Précision</p></strong>
+          <strong><p>Prix : $150</p></strong>
+          <button onclick="ajouterAuPanier('GPS de Haute Précision', 150)">Ajouter au Panier</button>
+        </li>
+  
+        <li>
+          <img src="img/smartphone.jpeg" alt="Smartphone dernier cri" style="max-width: 100%; height: auto;">
+          <strong>
+            <p>Smartphone dernier cri</p>
+            <p>Prix : $500</p>
+          </strong>
+          <button onclick="ajouterAuPanier('Smartphone dernier cri', 500)">Ajouter au Panier</button>
+        </li>
+  
+        <li>
+          <img src="img/laptop.jpeg" alt="Ordinateur Portable performant" style="max-width: 100%; height: auto;">
+          <strong>
+            <p>Ordinateur Portable performant</p>
+            <p>Prix : $1000</p>
+          </strong><
+          <button onclick="ajouterAuPanier('Ordinateur Portable performant', 1000)">Ajouter au Panier</button>
+        </li>
+  
+        <li>
+          <img src="img/camera.jpeg" alt="Caméra HD professionnelle" style="max-width: 100%; height: auto;">
+          <p>Caméra HD professionnelle</p>
+          <p>Prix : $800</p>
+          <button onclick="ajouterAuPanier('Caméra HD professionnelle', 800)">Ajouter au Panier</button>
+        </li>
+
+        <li>
+          <img src="img/Routeur Wi-Fi haute performance.jpeg" alt="Routeur Wi-Fi haute performance" style="max-width: 100%; height: auto;">
+          <p>Routeur Wi-Fi haute performance</p>
+          <p>Prix : $150</p>
+          <button onclick="ajouterAuPanier('Routeur Wi-Fi haute performance', 150)">Ajouter au Panier</button>
+        </li>
+
+        <li>
+          <img src="img/Console de Jeu dernière génération.jpeg" alt="Console de Jeu dernière génération" style="max-width: 100%; height: auto;">
+          <p>Console de Jeu dernière génération</p>
+          <p>Prix : $500</p>
+          <button onclick="ajouterAuPanier('Console de Jeu dernière génération', 500)">Ajouter au Panier</button>
+        </li>
+    
+        <!-- Imprimante 3D -->
+        <li>
+          <img src="img/Imprimante 3D.jpeg" alt="Imprimante 3D" style="max-width: 100%; height: auto;">
+          <p>Mini Imprimante 3D</p>
+          <p>Prix : $300</p>
+          <button onclick="ajouterAuPanier('Imprimante 3D', 300)">Ajouter au Panier</button>
+        </li>
+    
+        <!-- Écouteurs sans fil -->
+        <li>
+          <img src="img/Ecouteur sans fil.jpeg" alt="Écouteurs sans fil" style="max-width: 100%; height: auto;">
+          <p>Écouteurs sans fil</p>
+          <p>Prix : $100</p>
+          <button onclick="ajouterAuPanier('Écouteurs sans fil', 100)">Ajouter au Panier</button>
+        </li>
+    
+        <!-- Lampe LED intelligente -->
+        <li>
+          <img src="img/Lampe LED intelligente.jpeg" alt="Lampe LED intelligente" style="max-width: 100%; height: auto;">
+          <p>Lampe LED intelligente</p>
+          <p>Prix : $80</p>
+          <button onclick="ajouterAuPanier('Lampe LED intelligente', 80)">Ajouter au Panier</button>
+        </li>
+    
+        <!-- Casque virtuel -->
+        <li>
+          <img src="img/casque virtuel.jpeg" alt="Casque virtuel" style="max-width: 100%; height: auto;">
+          <p>Casque virtuel</p>
+          <p>Prix : $200</p>
+          <button onclick="ajouterAuPanier('Casque virtuel', 200)">Ajouter au Panier</button>
+        </li>
+
+        <li>
+          <img src="img/tablette educative.jpeg" alt="Tablette éducative" style="max-width: 100%; height: auto">
+          <p>Tablette éducative</p>
+          <p>Prix : $120</p>
+          <button onclick="ajouterAuPanier('Tablette éducative', 120)">Ajouter au Panier</button>
+        </li>
+        
+        <!-- Télévision Android -->
+        <li>
+          <img src="img/television Android.jpeg" alt="Télévision Android" style="max-width: 100%; height: auto">
+          <p>Télévision Android</p>
+          <p>Prix : $600</p>
+          <button onclick="ajouterAuPanier('Télévision Android', 600)">Ajouter au Panier</button>
+        </li>
+      </ul>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fermerFenetrePanier()">&times;</span>
+        <h3>Votre Panier</h3>
+        <ul id="liste-panier-modal"></ul>
+        <button onclick="fermerFenetrePanier()">Fermer</button>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>Livraison Gratuite - Paiement à la Livraison</p>
+  </footer>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("4R0TonA7bm5J_X80e");
+
+    function envoyerListeParEmail(listeProduits) {
+      const templateParams = {
+        to_name: document.getElementById("name").value,
+        from_name: "Votre nom",
+        from_email: document.getElementById("email").value,
+        from_num1: document.getElementById("numero1").value,
+        from_num2: document.getElementById("numero2").value,
+        listeProduits: listeProduits,
+        message: document.getElementById("message").value,
+      };
+
+      emailjs.send("service_93knjoh", "template_g2ygo6e", templateParams)
+        .then(function (response) {
+          console.log("Email envoyé avec succès:", response);
+        }, function (erreur) {
+          console.error("Erreur lors de l'envoi de l'e-mail:", erreur);
+        });
+    }
+
+    function afficherListePanier() {
+  let listeProduits = "Votre Panier:\n";
+  let produitCount = {};
+
+  panier.forEach(item => {
+    // Utiliser le nom du produit comme clé dans un objet pour compter les occurrences
+    produitCount[item.nom] = (produitCount[item.nom] || 0) + 1;
+  });
+
+  // Parcourir l'objet des produits et les ajouter à la liste
+  for (const nomProduit in produitCount) {
+    const quantite = produitCount[nomProduit];
+    listeProduits += `${nomProduit} - Quantité: ${quantite} - $${panier.find(item => item.nom === nomProduit).prix * quantite}\n`;
+  }
+
+  listeProduits += `\nTotal: $${total}`;
+
+  const confirmation = confirm(listeProduits);
+
+  if (confirmation) {
+    envoyerListeParEmail(listeProduits);
+    alert("Merci pour votre achat! La commande a été passée avec succès.");
+  } else {
+    alert("Opération annulée ou en cours de modification.");
+  }
+}
+
+    function enregistrerListeProduits() {
+      // Récupérer la liste du panier
+      var listePanier = "";
+
+      panier.forEach(item => {
+        listePanier += `${item.nom} - $${item.prix}\n`;
+      });
+
+      // Mettre à jour la valeur du champ caché "listeProduits"
+      document.getElementById("listeProduits").value = listePanier;
+    }
+
+    function envoyerEmail() {
+  // Récupérer les valeurs du formulaire
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var num1 = document.getElementById("numero1").value;
+  var num2 = document.getElementById("numero2").value;
+  
+  // Récupérer le contenu de la fenêtre modale
+  var listeProduitsModal = document.getElementById("liste-panier-modal").innerHTML;
+
+  // Paramètres pour le modèle de courrier
+  var templateParams = {
+    to_name: "Nom du destinataire", // Remplacez par le nom du destinataire
+    from_name: name,
+    from_email: email,
+    message: message,
+    from_num1: num1,
+    from_num2: num2,
+    listeProduits: listeProduitsModal, // Ajoutez le contenu de la fenêtre modale ici
+  };
+
+  // Envoyer l'e-mail
+  emailjs.send("service_93knjoh", "template_6fwj1jd", templateParams)
+    .then(function(response) {
+      alert("E-mail envoyé avec succès", response);
+      // Réinitialiser le formulaire après l'envoi réussi
+      document.getElementById("commande-form").reset();
+      // Fermer la fenêtre modale
+      fermerFenetrePanier();
+    }, function(error) {
+      alert("Échec de l'envoi de l'e-mail", error);
+    });
+}
+
+  </script>
+
+  
+</body>
+</html>

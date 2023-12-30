@@ -1,0 +1,154 @@
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; /* Couleur de fond générale */
+  color: #333; /* Couleur du texte principale */
+}
+
+/* Styles pour les petits écrans (jusqu'à 767 pixels de large) */
+@media (max-width: 767px) {
+  header {
+    padding: 0.5em 0;
+    background-color:ghostwhite ;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center; /* Centrer le texte */
+    color: #4CAF50; /* Couleur du texte pour le titre principal */
+  }
+
+  .com {
+    font-size: 30px;
+    display: block;
+    margin: 0 auto; /* Centrer le bouton */
+    background-color: #4CAF50; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .navigation {
+    margin-top: 10px;
+    float: none; /* Réinitialiser le flotement */
+    text-align: center; /* Centrer le texte de la navigation */
+    font-size: 30px;
+  }
+
+  #panier-icon {
+    font-size: 30px;
+    display: block;
+    margin: 0 auto; /* Centrer l'icône du panier */
+    color: #4CAF50; /* Couleur de l'icône du panier */
+    cursor: pointer;
+  }
+
+  .produit li {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .produit img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .commande h2 {
+    font-size: 1.2em;
+    text-align: center; /* Centrer le titre de la section de commande */
+    color: #4CAF50; /* Couleur du texte pour le titre de la section de commande */
+  }
+
+  .commande form {
+    margin-top: 10px;
+  }
+
+  label, input, textarea, button {
+    font-size: 14px;
+    width: 100%; /* Remplir la largeur du conteneur parent */
+    box-sizing: border-box; /* Garder la largeur incluant les bordures et le rembourrage */
+  }
+}
+
+/* Styles pour les écrans plus grands */
+@media (min-width: 768px) {
+  header {
+    padding: 1em 0;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #4CAF50;
+  }
+
+  .com {
+    font-size: 50px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .navigation {
+    margin-top: 15px;
+    float: right; /* Aligner la navigation à droite */
+    text-align: center;
+  }
+
+  #panier-icon {
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+    color: #4CAF50;
+    cursor: pointer;
+  }
+
+  .produit li {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+
+  .commande h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #4CAF50;
+  }
+
+  label, input, textarea, button {
+    font-size: 16px;
+  }
+}
+
+/* Boutons généraux */
+button {
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Style de base pour les boutons avec couleur bleue */
+button {
+  background-color: #3498db;
+}
+
+/* Style hover pour les boutons */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Style actif (clic) pour les boutons */
+button:active {
+  background-color: #21618C;
+}

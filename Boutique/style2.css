@@ -1,0 +1,93 @@
+.commande h2 {
+    font-size: 1.2em;
+    text-align: center; /* Centrer le titre de la section de commande */
+    color: #4CAF50; /* Couleur du texte pour le titre de la section de commande */
+  }
+
+  .commande form {
+    margin-top: 10px;
+  }
+
+  .commande h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #4CAF50;
+  }
+
+  label, input, textarea, button {
+    font-size: 16px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Couleur de fond */
+}
+
+header {
+    background-color: #1cf814; /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte de l'en-tête */
+    text-align: center;
+    padding: 15px 0;
+}
+
+.commande {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Couleur de fond du formulaire */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.commande h1 {
+    color: #333; /* Couleur du texte du formulaire */
+    text-align: center;
+}
+
+.commande form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Couleur du texte des étiquettes */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Couleur de la bordure des champs de saisie */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9; /* Couleur de fond du bouton au survol */
+}
+
+button:active {
+    background-color: #21618C; /* Couleur de fond du bouton lors du clic */
+}
+
+.navigation {
+    margin-top: 10px;
+    float: none; /* Réinitialiser le flotement */
+    text-align: center; /* Centrer le texte de la navigation */
+    font-size: 30px;
+  }
